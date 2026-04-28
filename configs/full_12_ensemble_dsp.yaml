@@ -1,0 +1,39 @@
+float32_matmul_precision: highest
+fp16: true
+backbone:
+  backbone: dinov2
+  patch_size: 14
+  embed_dim: 1024
+  depth: 24
+  num_heads: 16
+  mlp_ratio: 4.0
+  drop_path_rate: 0.1
+  output_layers: [4, 11, 17, 23]
+  include_cls_token: false
+  include_task_token: false
+  backbone_pretrained_path: /home/carmelo/RICERCA/INSAIT/ConvAtt_repo/weights/dinov2_vitl14_pretrain.pth
+  pretrained_img_size: 518
+  learnable_pos_embed: false
+  num_register_tokens: 0
+
+convatt:
+  enabled: true
+
+  conv_style: full # full, depthwise
+  conv_granularity: blockwise # blockwise, scattered
+  head_ensembling: true # true, false
+  conv_selection: dsp # manual, dsp
+
+  gumbel_k: 12
+  tau: [ 1.0, 1e-3 ]
+  tau_decay_n: 30
+  gates_lr: 0.01
+  gates_wd: 0.0
+  gates_lr_fixed: false
+
+  conv_init: true
+  freeze_model: false
+  layer_decay: false
+  weight_decay: false
+
+img_size: 336
