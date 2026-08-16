@@ -162,7 +162,16 @@ A hybrid approach where standard attention heads and depthwise convolution heads
 The depthwise decomposition is applied to the SPViT setup, combining both architectural innovations for maximum efficiency gains.
 
 ## Reference
-TBD;
+```
+@inproceedings{scribano2026accelerating,
+  title={Accelerating Vision Foundation Models with Drop-in Depthwise Convolution},
+  author={Scribano, Carmelo and Mahdi, Mohammad and Prisadnikov, Nedyalko and Fu, Yuqian and Franchini, Giorgia and Paudel, Danda Pani and Bertogna, Marko and Van Gool, Luc},
+  booktitle={International Conference on Pattern Recognition},
+  pages={463--477},
+  year={2026},
+  organization={Springer}
+}
+```
 
 ## Acknowledgement
 *This research was partially funded by the dAIedge project (HORIZON-CL4-2022-HUMAN-02-02, Grant Agreement Number: 101120726) and the Ministry of Education and Science of Bulgaria (support for INSAIT, part of the Bulgarian National Roadmap for Research Infrastructure).*
